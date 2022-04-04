@@ -28,10 +28,8 @@ jobs:
       - name: Setup Node.js environment
   uses: actions/setup-node@v3.1.0
   with:
-    # Set always-auth in npmrc
-    always-auth: # optional, default is false
-    # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
     node-version: 12
+    
     - name: GitHub Action for Yarn
   # You may pin to the exact commit or the version.
   # uses: Borales/actions-yarn@4965e1a0f0ae9c422a9a5748ebd1fb5e097d22b9
@@ -40,7 +38,7 @@ jobs:
     # Yarn command
     cmd: install
     
-    -  name: creating build
+    - name: creating build
       run: yarn build
     
     - name: install surge
